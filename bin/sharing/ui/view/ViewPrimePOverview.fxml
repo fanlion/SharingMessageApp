@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.BorderPane?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sharing.ui.view.ViewPrimePController">
+   <children>
+      <Label layoutX="14.0" layoutY="14.0" text="查看大素数文件值">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Separator layoutX="10.0" layoutY="51.0" prefHeight="0.0" prefWidth="585.0" />
+      <Text layoutX="32.0" layoutY="110.0" strokeType="OUTSIDE" strokeWidth="0.0" text="该功能可以查看指定大素数文件的具体值">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <Label layoutX="63.0" layoutY="191.0" text="选取文件">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="pFileTF" layoutX="138.0" layoutY="189.0" onMouseClicked="#handlePFileTF" prefHeight="23.0" prefWidth="400.0" promptText="在这里选取你要查看的文件" />
+      <Separator layoutX="11.0" layoutY="292.0" prefHeight="10.0" prefWidth="585.0" />
+      <Button fx:id="startBtn" layoutX="425.0" layoutY="341.0" mnemonicParsing="false" onMouseClicked="#handleStartBtn" prefHeight="23.0" prefWidth="107.0" text="查看" />
+   </children>
+</AnchorPane>

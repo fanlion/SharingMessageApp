@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.BorderPane?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #fee;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Text fill="#801010" layoutX="108.0" layoutY="144.0" strokeType="OUTSIDE" strokeWidth="0.0" text="欢迎使用跨隐私数据库信息共享软件">
+         <font>
+            <Font size="24.0" />
+         </font>
+         <effect>
+            <InnerShadow />
+         </effect>
+      </Text>
+      <Text layoutX="378.0" layoutY="240.0" strokeType="OUTSIDE" strokeWidth="0.0" text="指导老师：  景旭" wrappingWidth="156.65234375">
+         <font>
+            <Font size="18.0" />
+         </font>
+         <effect>
+            <SepiaTone />
+         </effect>
+      </Text>
+      <Text layoutX="378.0" layoutY="284.0" strokeType="OUTSIDE" strokeWidth="0.0" text="作者：  李繁" wrappingWidth="126.65234375">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+   </children>
+   <effect>
+      <Lighting>
+         <bumpInput>
+            <Shadow />
+         </bumpInput>
+         <light>
+            <Light.Distant />
+         </light>
+      </Lighting>
+   </effect>
+</AnchorPane>

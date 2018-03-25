@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.BorderPane?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sharing.ui.view.OpenNativeController">
+   <children>
+      <TabPane fx:id="tabPane" layoutX="14.0" layoutY="14.0" prefHeight="400.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <tabs>
+          <Tab fx:id="stepOneTab" text="步骤一">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="8.0" layoutY="7.0" text="数据库连接设置" textAlignment="CENTER">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                           <effect>
+                              <InnerShadow />
+                           </effect>
+                        </Label>
+                        <Separator layoutX="6.0" layoutY="35.0" prefHeight="1.0" prefWidth="585.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="6.0" />
+                        <Label layoutX="24.0" layoutY="57.0" text="数据库地址：" textAlignment="RIGHT">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="24.0" layoutY="89.0" prefHeight="15.0" prefWidth="84.0" text="数据库名称：">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="44.0" layoutY="121.0" text="端 口 号：">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label contentDisplay="RIGHT" layoutX="41.0" layoutY="154.0" prefHeight="19.0" prefWidth="71.0" text="用 户 名：" textAlignment="RIGHT">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="47.0" layoutY="196.0" prefHeight="19.0" prefWidth="69.0" text="密    码：" textAlignment="RIGHT">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Separator layoutX="5.0" layoutY="284.0" prefHeight="4.0" prefWidth="589.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="6.0" />
+                        <TextField fx:id="dbUrlTextField" layoutX="128.0" layoutY="55.0" prefHeight="23.0" prefWidth="422.0" promptText="你要连接的数据库地址" />
+                        <TextField fx:id="dbNameTextField" layoutX="128.0" layoutY="87.0" prefHeight="23.0" prefWidth="422.0" promptText="输入你的数据库名称" />
+                        <TextField fx:id="dbPortTextField" layoutX="127.0" layoutY="119.0" prefHeight="23.0" prefWidth="423.0" text="3306" />
+                        <TextField fx:id="dbUserNameTextField" layoutX="127.0" layoutY="152.0" prefHeight="23.0" prefWidth="423.0" promptText="输入你的数据库用户名" />
+                        <PasswordField fx:id="dbPasswordTextField" layoutX="127.0" layoutY="194.0" prefHeight="23.0" prefWidth="423.0" promptText="输入你的密码" />
+                        <HBox layoutX="339.0" layoutY="237.0" prefHeight="23.0" prefWidth="197.0" spacing="20.0" AnchorPane.rightAnchor="64.0">
+                           <children>
+                              <Button fx:id="resetBtn" layoutX="339.0" layoutY="221.0" mnemonicParsing="false" onMouseClicked="#handleRestBtn" text="清空输入" />
+                              <Button fx:id="connTestBtn" layoutX="422.0" layoutY="221.0" mnemonicParsing="false" onMouseClicked="#handleConnTestBtn" prefHeight="23.0" prefWidth="100.0" text="测试连接" />
+                           </children>
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                        </HBox>
+                        <HBox layoutX="389.0" layoutY="309.0" AnchorPane.bottomAnchor="39.0" AnchorPane.rightAnchor="29.0">
+                           <children>
+                              <Button fx:id="tabOneNextBtn" layoutX="389.0" layoutY="309.0" mnemonicParsing="false" onMouseClicked="#handleTabOneNextBtn" prefHeight="23.0" prefWidth="101.0" text="下一步" />
+                           </children>
+                        </HBox>
+                        <Separator layoutX="11.0" layoutY="35.0" orientation="VERTICAL" prefHeight="232.0" prefWidth="3.0" AnchorPane.leftAnchor="5.0" />
+                        <Separator layoutX="588.0" layoutY="36.0" orientation="VERTICAL" prefHeight="232.0" prefWidth="2.0" AnchorPane.rightAnchor="6.0" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab fx:id="stepTwoTab" text="步骤二">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="300.0" prefWidth="600.0">
+                     <children>
+                        <Label layoutX="6.0" layoutY="8.0" prefHeight="24.0" prefWidth="138.0" text="数据库参数设置" textAlignment="CENTER">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                           <effect>
+                              <InnerShadow />
+                           </effect>
+                        </Label>
+                        <Separator layoutX="6.0" layoutY="38.0" prefHeight="0.0" prefWidth="589.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" />
+                        <Separator layoutX="5.0" layoutY="297.0" prefHeight="2.0" prefWidth="587.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" />
+                        <HBox layoutX="448.0" layoutY="316.0" spacing="20.0" AnchorPane.bottomAnchor="39.0" AnchorPane.rightAnchor="29.0">
+                           <children>
+                              <Button fx:id="tabTwoPreBtn" mnemonicParsing="false" onMouseClicked="#handleTabTwoPreBtn" prefHeight="23.0" prefWidth="95.0" text="上一步" />
+                              <Button fx:id="tabTwoNextBtn" layoutX="448.0" layoutY="316.0" mnemonicParsing="false" onMouseClicked="#handleTabTwoNextBtn" prefHeight="23.0" prefWidth="102.0" text="下一步" />
+                           </children>
+                        </HBox>
+                        <Separator layoutX="3.0" layoutY="38.0" orientation="VERTICAL" prefHeight="243.0" prefWidth="6.0" AnchorPane.leftAnchor="5.0" />
+                        <Separator layoutX="592.0" layoutY="41.0" orientation="VERTICAL" prefHeight="238.0" prefWidth="6.0" AnchorPane.rightAnchor="5.0" />
+                        <ScrollPane layoutX="14.0" layoutY="83.0" prefHeight="204.0" prefViewportHeight="200.0" prefViewportWidth="571.0" prefWidth="573.0">
+                           <content>
+                              <TableView fx:id="tableViewTabTwo" prefHeight="200.0" prefWidth="571.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="-371.0" AnchorPane.topAnchor="0.0">
+                                <columns>
+                                  <TableColumn fx:id="commonTabTwoTableCol" prefWidth="75.0" text="共有" />
+                                  <TableColumn fx:id="nuncommonTabTwoTableCol" prefWidth="75.0" text="非共用" />
+                                    <TableColumn fx:id="fieldTabTwoTableCol" prefWidth="181.0" text="Field" />
+                                    <TableColumn fx:id="typeTabTwoTableCol" prefWidth="239.0" text="Type" />
+                                    <TableColumn fx:id="nullTabTwoTableCol" prefWidth="75.0" text="Null" />
+                                    <TableColumn fx:id="keyTabTwoTableCol" prefWidth="75.0" text="Key" />
+                                    <TableColumn fx:id="defaultTabTwoTableCol" prefWidth="75.0" text="Default" />
+                                    <TableColumn fx:id="extraTabTwoTableCol" prefWidth="75.0" text="Extra" />
+                                </columns>
+                                 <columnResizePolicy>
+                                    <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                 </columnResizePolicy>
+                              </TableView>
+                           </content>
+                        </ScrollPane>
+                        <Label layoutX="14.0" layoutY="41.0" prefHeight="42.0" prefWidth="96.0" text="选取数据库表">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <ChoiceBox fx:id="tabTwoChoiceBox" layoutX="110.0" layoutY="51.0" prefWidth="150.0" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+            <Tab fx:id="stepThreeTab" text="步骤三">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="14.0" layoutY="7.0" prefHeight="24.0" prefWidth="86.0" text="服务设置" textAlignment="CENTER">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                           <effect>
+                              <InnerShadow />
+                           </effect>
+                        </Label>
+                        <Label layoutX="48.0" layoutY="110.0" prefHeight="19.0" prefWidth="126.0" text="选取主密钥文件：">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="44.0" layoutY="164.0" text="选取次密钥文件：">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Separator layoutY="34.0" prefHeight="0.0" prefWidth="600.0" />
+                        <HBox layoutX="339.0" layoutY="296.0" prefHeight="23.0" prefWidth="217.0" spacing="20.0" AnchorPane.bottomAnchor="39.0" AnchorPane.rightAnchor="29.0">
+                           <children>
+                              <Button fx:id="tabThreePreBtn" layoutX="376.0" layoutY="296.0" mnemonicParsing="false" onMouseClicked="#handleTabThreePreBtn" prefHeight="23.0" prefWidth="92.0" text="上一步" />
+                              <Button fx:id="tabThreeStartBtn" layoutX="449.0" layoutY="296.0" mnemonicParsing="false" onMouseClicked="#handleBuildServer" prefHeight="23.0" prefWidth="98.0" text="开启服务" />
+                           </children>
+                        </HBox>
+                        <TextField fx:id="primayKeyTextField" layoutX="166.0" layoutY="108.0" onMouseClicked="#handlePrimaryKeyChoose" prefHeight="23.0" prefWidth="367.0" promptText="在这里输入你加密数据库的密钥文件" />
+                        <TextField fx:id="secondaryKeyTextField" layoutX="165.0" layoutY="162.0" onMouseClicked="#handleSecondaryKeyChoose" prefHeight="23.0" prefWidth="368.0" promptText="次密钥就是一个临时密钥" />
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>

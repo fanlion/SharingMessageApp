@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.BorderPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sharing.ui.view.KeyManageController">
+   <children>
+      <Label layoutX="14.0" layoutY="14.0" text="生成密钥文件">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Separator layoutX="4.0" layoutY="39.0" prefHeight="1.0" prefWidth="591.0" />
+      <Label layoutX="59.0" layoutY="143.0" text="选取大素数文件">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="fileKeyTF" layoutX="184.0" layoutY="141.0" onMouseClicked="#handleFileKeyTF" prefHeight="23.0" prefWidth="357.0" promptText="请选择提供商提供的大素数文件" />
+      <Label layoutX="24.0" layoutY="67.0" text="你可以选择大素数文件或者直接输入大素数，该素数由提供商提供">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="63.0" layoutY="226.0" text="直接输入大素数" />
+      <TextField fx:id="valueKeyTF" layoutX="181.0" layoutY="222.0" prefHeight="23.0" prefWidth="357.0" promptText="请直接输入提供商提供的大素数值" />
+      <Separator layoutX="10.0" layoutY="300.0" prefHeight="3.0" prefWidth="581.0" />
+      <Button layoutX="440.0" layoutY="344.0" mnemonicParsing="false" onMouseClicked="#handleGenKeyBtn" prefHeight="23.0" prefWidth="98.0" text="生成密钥" />
+   </children>
+</AnchorPane>

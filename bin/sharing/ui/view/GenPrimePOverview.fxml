@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.BorderPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sharing.ui.view.GenPrimePController">
+   <children>
+      <Label layoutX="14.0" layoutY="14.0" text="生成公开大素数">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Separator layoutX="7.0" layoutY="45.0" prefHeight="0.0" prefWidth="590.0" />
+      <Text layoutX="58.0" layoutY="117.0" strokeType="OUTSIDE" strokeWidth="0.0" text="该功能用于生成一个内部大素数文件，如果需要与其他用户交互数据请使用">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <Text layoutX="14.0" layoutY="150.0" strokeType="OUTSIDE" strokeWidth="0.0" text="提供商提供的大素数">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <Button fx:id="genPrimePBtn" layoutX="368.0" layoutY="312.0" mnemonicParsing="false" onMouseClicked="#handleStart" prefHeight="23.0" prefWidth="117.0" text="生成大素数文件" />
+   </children>
+</AnchorPane>

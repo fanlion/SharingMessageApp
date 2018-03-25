@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane fx:id="borderPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="783.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sharing.ui.view.MainAppController">
+   <top>
+      <MenuBar BorderPane.alignment="CENTER">
+        <menus>
+          <Menu mnemonicParsing="false" text="文件">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Close" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="编辑">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Delete" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="帮助">
+            <items>
+              <MenuItem mnemonicParsing="false" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </top>
+   <left>
+      <SplitPane>
+         <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0" SplitPane.resizableWithParent="false">
+               <children>
+                  <Accordion layoutY="58.0" prefHeight="184.0" prefWidth="169.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <panes>
+                      <TitledPane fx:id="nativeTitledPane" animated="false" onMouseClicked="#handleTitledPane" prefHeight="367.0" prefWidth="145.0" text="本地服务管理" textAlignment="CENTER">
+                        <content>
+                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <Button fx:id="openButton" layoutX="-1.0" layoutY="3.0" mnemonicParsing="false" onMouseClicked="#handleOpenButton" prefHeight="25.0" prefWidth="160.0" text="开启本地服务" textAlignment="CENTER" />
+                                    <Button fx:id="showButton" layoutX="-1.0" layoutY="28.0" mnemonicParsing="false" onMouseClicked="#handleShowServerStatus" prefHeight="25.0" prefWidth="160.0" text="查看服务状态" />
+                                 </children>
+                              </AnchorPane>
+                        </content>
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                      </TitledPane>
+                      <TitledPane fx:id="remoteTitlePane" animated="false" onMouseClicked="#handleTitledPane" text="远程连接管理">
+                        <content>
+                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <Button fx:id="openRemoteOverviewBtn" layoutX="-1.0" mnemonicParsing="false" onMouseClicked="#handleOpenRemote" prefHeight="25.0" prefWidth="158.0" text="新建远程连接" />
+                                    <Button fx:id="openRemoteStatusBtn" layoutY="23.0" mnemonicParsing="false" onMouseClicked="#handleRemoteConnStatus" prefHeight="25.0" prefWidth="158.0" text="查看任务状态" />
+                                 </children>
+                              </AnchorPane>
+                        </content>
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                      </TitledPane>
+                      <TitledPane fx:id="keyTitlePane" animated="false" onMouseClicked="#handleTitledPane" text="密钥管理">
+                        <content>
+                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <Button mnemonicParsing="false" onMouseClicked="#handleOpenKeyMananger" prefHeight="25.0" prefWidth="158.0" text="生成密钥" />
+                                    <Button fx:id="OpenVerifyOneKeyBtn" layoutY="25.0" mnemonicParsing="false" onMouseClicked="#handleOpenVerifyOneKey" prefHeight="25.0" prefWidth="158.0" text="校验密钥" />
+                                    <Button fx:id="openGenPrimePBtn" layoutX="1.0" layoutY="50.0" mnemonicParsing="false" onMouseClicked="#handleOpenGenPrimeP" prefHeight="25.0" prefWidth="157.0" text="生成大素数" />
+                                    <Button fx:id="viewPrimePBtn" layoutY="75.0" mnemonicParsing="false" onMouseClicked="#handleViewPrimeP" prefHeight="25.0" prefWidth="158.0" text="查看大素数" />
+                                 </children>
+                              </AnchorPane>
+                        </content>
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                      </TitledPane>
+                    </panes>
+                  </Accordion>
+               </children>
+            </AnchorPane>
+         </items>
+      </SplitPane>
+   </left>
+</BorderPane>

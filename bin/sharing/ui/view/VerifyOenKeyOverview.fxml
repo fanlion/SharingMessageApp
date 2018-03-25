@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.BorderPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sharing.ui.view.VerifyOneKeyController">
+   <children>
+      <Label layoutX="14.0" layoutY="14.0" text="校验密钥">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Separator layoutY="46.0" prefHeight="3.0" prefWidth="600.0" />
+      <Text layoutX="8.0" layoutY="82.0" strokeType="OUTSIDE" strokeWidth="0.0" text="该功能用于校验你的密钥是否为某个大素数生成，大素数值只能以一种方式提供">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <Label layoutX="50.0" layoutY="120.0" text="选择大素数文件">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="pFileTF" layoutX="161.0" layoutY="116.0" onMouseClicked="#handlePFileTF" prefHeight="23.0" prefWidth="335.0" promptText="在这里选择你的大素数文件" />
+      <Label layoutX="50.0" layoutY="171.0" text="直接输入大素数值" />
+      <TextField fx:id="pValueTF" layoutX="161.0" layoutY="167.0" prefHeight="23.0" prefWidth="335.0" promptText="在这里直接输入你的大素数值" />
+      <Separator layoutX="8.0" layoutY="218.0" prefHeight="3.0" prefWidth="590.0" />
+      <Label layoutX="50.0" layoutY="267.0" text="选择你的密钥文件" />
+      <TextField fx:id="keyFileTF" layoutX="161.0" layoutY="263.0" onMouseClicked="#handleKeyFileTF" prefHeight="23.0" prefWidth="335.0" promptText="选择你要校验的密钥文件" />
+      <Separator layoutX="8.0" layoutY="323.0" prefHeight="3.0" prefWidth="590.0" />
+      <Button fx:id="startBtn" layoutX="434.0" layoutY="345.0" mnemonicParsing="false" onMouseClicked="#handleStartBtn" prefHeight="23.0" prefWidth="107.0" text="开始校验" />
+   </children>
+</AnchorPane>
